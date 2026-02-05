@@ -50,10 +50,10 @@ nav{
 .nav-3 button{
     outline: none;
     box-shadow: none;
-    padding: 8px 16px;
+    padding: 5px 12px;
     background-color: #252424;
     border-radius: 20px;
-    font-size: 20px;
+    font-size: 15px;
     border: 1px solid rgba(255,255,255,0.1);
 }
 
@@ -123,49 +123,54 @@ nav{
     margin-top: 40px;
     font-size: 20px;
 }
-
 .main-4 {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
 
-.main-4 .container{
-    /* background-color: #fff; */
-    display: flex;
-    gap: 30px;
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 30px;
-    padding: 6px 30px;
+.main-4 .container {
+  display: flex;
+  align-items: center;
+  width: 420px;            
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 40px;
+  padding: 6px;
+  background: #111;
 }
 
-.main-4 .container input{
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #000;
-    font-size: 16px;
+.main-4 .container input {
+  flex: 1;                   
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;              
+  font-size: 16px;
+  padding: 10px 15px;
 }
 
-.main-4 .container button{
-    background: #fff;
-    color: #000;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 600;
+.main-4 .container button {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .hero{
     display: flex;
     justify-content: center;
-}
-
-.hero {
     margin-top: 100px;
 }
+
+.hero img{
+    border-radius: 20px;
+}
+
+
 
 .hero img{
     background: linear-gradient(
@@ -173,7 +178,6 @@ nav{
     #020305 30%,
     #1f1f1f 30%
   );
-  /* margin-bottom: 50px; */
 }
 
 .logo-section{
