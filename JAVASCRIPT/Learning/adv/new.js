@@ -27,11 +27,33 @@ function Drink(name){
     this.name = name
 }
 
-let chai = new Drink("tea")
-let cofee =  Drink("coffee")
+// let chai = new Drink("tea")
+// let cofee =  Drink("coffee")
 
-console.log(chai);
-console.log(cofee);
+// console.log(chai);
+// console.log(cofee);
 
 
+
+// t- class ------------------------------------------
+
+// It is mostly used with constructor functions
+
+// Constructor
+// 1. Capital letter name [String, Number, Array, Object]
+// should be Execute by "new" operator
+
+function User (name) {
+    this.name = name;
+    this.isPaid = false
+}
+
+const ans = new User("Abhi")
+console.log(ans);
+
+
+// new ka jaddu 
+// 1. this = {}
+// 2. operation
+// 3. return this
 
