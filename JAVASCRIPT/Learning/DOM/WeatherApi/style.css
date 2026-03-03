@@ -1,0 +1,83 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+/* App Title */
+.app-title {
+    color: white;
+    font-size: 32px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+/* Main Card */
+body > div {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 350px;
+    text-align: center;
+}
+
+/* Input Field */
+#cityInput {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#cityInput:focus {
+    border-color: #667eea;
+}
+
+/* Button */
+#findButton {
+    padding: 10px 15px;
+    border: none;
+    background: #667eea;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: 0.3s;
+}
+
+#findButton:hover {
+    background: #5563c1;
+}
+
+/* Weather Info Section */
+#city-name {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+#city-time {
+    color: #777;
+    margin: 5px 0;
+}
+
+#city-temp {
+    font-size: 28px;
+    font-weight: bold;
+    color: #667eea;
+    margin-top: 10px;
+}
