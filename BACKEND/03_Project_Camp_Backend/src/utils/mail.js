@@ -45,7 +45,7 @@ const sendEmail = async (options) => {
   const mailGenerator = new mailgen({
     theme: "default",
     product: {
-      name: "PRoject management",
+      name: "Project management",
       link: "https://ptojectmanagelink.com",
     },
   });
