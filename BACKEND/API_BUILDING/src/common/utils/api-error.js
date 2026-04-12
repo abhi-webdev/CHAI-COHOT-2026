@@ -1,9 +1,9 @@
 class ApiError extends Error{
     constructor(statusCode, message){
-        super(statusCode)
+        super(message)
         this.statusCode = statusCode
         this.isOperational = true
-        Error.captureStackTrace(this, this.contructor)
+        Error.captureStackTrace(this, this.constructor)
     }
 
     static badRequest(message = "Bad Request"){
@@ -16,6 +16,14 @@ class ApiError extends Error{
 
     static conflict(message = "User already exist"){
         return new ApiError(409, message)
+    }
+
+    static forbidden(message = "forbidden"){
+        return new ApiError(403, message)
+    }
+
+    static notFound(message = "notFound"){
+        return new ApiError(403, message)
     }
 }
 
