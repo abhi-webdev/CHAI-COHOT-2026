@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket</title>
+</head>
+
+<body>
+<!-- 
+    <input type="text" placeholder="Enter message" id="message">
+    <button id="send">Send</button>
+    -->
+
+    <!--  check boxex -->
+
+    <div id="checkbox-container"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+        const socket = io();
+
+        const checkboxs = new Array(1000).fill(0);
+
+        const checboxContainer = document.getElementById("checkbox-container")
+        checkboxs.forEach((checkbox, i) => {
+            const input = document.createElement("input")
+            input.setAttribute("type", "checkbox");
+            input.id = `index-${i}`
+            input.addEventListener("change", (e) => {
+                socket.emit("checkbox-update", {index: i , value: input.checked})
+            })
+            checboxContainer.append(input)
+        })
+
+
+
+        async function stateUpdate() {
+            const res = await fetch("/state", {
+                headers: {
+                    'Content-Type' : 'application/json'
+                }
+            })
+
+            const _json = await res.json()
+            if(_json.state) {
+                _json.state.forEach((e, index) => {
+                    const ele = document.getElementById(`index-${index}`)
+                    ele.checked = e
+                })
+            }
+
+        }
+
+        socket.on("checkbox-update", ({index, value}) => {
+            /*
+            const e = document.getElementById(`index-${index}`)
+            if(e) {
+                e.checked = true;
+            }
+                */
+
+            stateUpdate()
+        })
+
+        stateUpdate()
+     
+/*--------- chat app ------------
+        const userMessage = document.getElementById("message")
+        const sendMessage = document.getElementById("send")
+
+        sendMessage.addEventListener("click", (message) => {
+            const inputmessage = userMessage.value
+            socket.emit("user-message", inputmessage)
+        })
+
+        socket.on("message", (response) => {
+            console.log(response)
+        })
+*/
+    </script>
+</body>
+
+</html>
