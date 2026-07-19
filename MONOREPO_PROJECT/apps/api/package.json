@@ -6,15 +6,17 @@
   "private": true,
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build" : "tsc",
-    "start" : "node dist/index.js"
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
   "type": "module",
   "dependencies": {
     "@MONOREPO_PROJECT/utils": "workspace:*",
+    "cors": "^2.8.6",
     "express": "^5.2.1"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/node": "^26.1.1",
     "tsx": "^4.23.1",
