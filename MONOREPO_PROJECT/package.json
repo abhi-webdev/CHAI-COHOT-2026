@@ -5,12 +5,13 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "dev": "pnpm -r -parallel dev",
-    "build": "pnpm -r build"
+    "dev": "turbo dev",
+    "build": "turbo build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "packageManager": "pnpm@11.11.2",
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
@@ -18,5 +19,8 @@
       "onFail": "download"
     }
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "turbo": "^2.10.5"
+  }
 }
