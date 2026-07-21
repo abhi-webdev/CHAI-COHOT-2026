@@ -23,13 +23,13 @@ export async function POST(request: NextRequest) {
       );
     }
     const todo = await prisma.todo.create({
-        data: title
-    })
+      data: { title },
+    });
 
     return NextResponse.json(
-        { success: true, message: todo },
-        { status: 201 },
-    )
+      { success: true, data: todo },
+      { status: 201 },
+    );
   } catch (error) {
     return NextResponse.json(
         { success: false, error: 'Failed to create todo' },
